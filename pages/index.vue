@@ -46,7 +46,7 @@
                         "password": password.value
                     }),
                     onResponse({ request, response, options }) {
-                        // console.log(response)
+                        console.log(response)
                         if(response.status === 400){
                             // alert("Error 400")
                             // Sweet Alert Dialog
@@ -131,7 +131,7 @@
                                     :rules="[ruleRequired, ruleEmail]"
                                     label="Email" 
                                     variant="outlined"
-                                    prepend-inner-icon="fluent:mail-12-regular"
+                                    prepend-inner-icon="mdi-email"
                                     id="email"
                                     name="email"
                                     type="email"
@@ -143,7 +143,7 @@
                                     :rules="[ruleRequired, rulePassLen]"
                                     label="Password" 
                                     variant="outlined"
-                                    prepend-inner-icon="fluent:lock-12-regular"
+                                    prepend-inner-icon="mdi-lock"
                                     id="password"
                                     name="password"
                                     type="password"

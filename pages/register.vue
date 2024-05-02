@@ -27,7 +27,7 @@
                                 <VTextField 
                                     label="Username" 
                                     variant="outlined"
-                                    prepend-inner-icon="fluent:person-12-regular"
+                                    prepend-inner-icon="mdi-account"
                                     id="username"
                                     name="username"
                                     type="username"
@@ -37,7 +37,7 @@
                                 <VTextField 
                                     label="Email" 
                                     variant="outlined"
-                                    prepend-inner-icon="fluent:mail-12-regular"
+                                    prepend-inner-icon="mdi-email"
                                     id="email"
                                     name="email"
                                     type="email"
@@ -47,7 +47,7 @@
                                 <VTextField 
                                     label="Password" 
                                     variant="outlined"
-                                    prepend-inner-icon="fluent:lock-12-regular"
+                                    prepend-inner-icon="mdi-lock"
                                     id="password"
                                     name="password"
                                     type="password"

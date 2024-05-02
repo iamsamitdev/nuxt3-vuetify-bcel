@@ -25,7 +25,7 @@ export const darkTheme: ThemeDefinition = {
     colors: {
         background: "#0C111B",
         surface: "#1f2937",
-        primary: "#6366f1",
+        primary: "#0C111B",
         secondary: "#9333ea",
         error: "#ef4444",
         info: "#3b82f6",

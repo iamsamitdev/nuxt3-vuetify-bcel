@@ -1,11 +1,15 @@
 // import createVuetify from "vuetify"
 import { createVuetify } from "vuetify"
 
+import { mdi } from 'vuetify/iconsets/mdi'
+import "@mdi/font/css/materialdesignicons.css"
+
+
 // import custom icons from helpers
 import { aliases, custom } from "@/helpers/customIcons"
 
 // import theme from "@/helpers/themes"
-import { LIGHT_THEME, lightTheme, DARK_THEME, darkTheme } from "@/helpers/themes"
+import { LIGHT_THEME, lightTheme, darkTheme } from "@/helpers/themes"
 
 // import defaults from "@/helpers/defaults"
 import { defaults } from "@/helpers/defaults"
@@ -30,10 +34,11 @@ export default defineNuxtPlugin((nuxtApp ) => {
         },
         // Add the custom iconset
         icons: {
-            defaultSet: "custom",
+            defaultSet: "mdi",
             aliases,
             sets: {
                 custom,
+                mdi,
             },
         },
     })

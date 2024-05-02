@@ -4,7 +4,13 @@ import vuetify from "vite-plugin-vuetify"
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
-  css: ["@/assets/scss/style.scss"],
+  routeRules: {
+    '/backend/**': { ssr: false },
+  },
+  css: [
+    "@/assets/scss/style.scss",
+    "@/assets/backend/style.scss",
+  ],
   build: {
     transpile: ["vuetify"],
   },
@@ -65,9 +71,10 @@ export default defineNuxtConfig({
   // runtime config
   runtimeConfig: {
     public: {
-        strapi: {
-          url: process.env.STRAPI_URL || "http://localhost:1337/api",
-        },
-    },
+       strapi: {
+         url: process.env.STRAPI_URL || "http://localhost:1337/api",
+       },
+       urlroot: process.env.STRAPI_URL_ROOT || "http://localhost:1337",
+    }
   },
 })
