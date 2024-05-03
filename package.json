@@ -10,7 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^8.3.1",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
+    "@prisma/client": "^5.13.0",
     "nuxt": "^3.11.2",
+    "pinia-plugin-persistedstate": "^3.2.1",
     "sweetalert2": "^11.10.8",
     "vite-plugin-vuetify": "2.0",
     "vue": "^3.4.21",
@@ -20,8 +24,11 @@
     "@mdi/font": "^7.0.96",
     "@nuxtjs/google-fonts": "3.2",
     "@nuxtjs/robots": "^3.0.0",
+    "@pinia/nuxt": "^0.4.6",
     "apexcharts": "^3.35.0",
     "nuxt-icon": "^0.6.10",
+    "pinia": "^2.0.30",
+    "prisma": "^5.13.0",
     "sass": "^1.56.1",
     "vue3-apexcharts": "^1.4.1",
     "vuetify": "3.6"

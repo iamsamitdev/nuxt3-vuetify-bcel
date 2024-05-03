@@ -24,6 +24,9 @@ export default defineNuxtConfig({
   },
   modules: [
     "nuxt-icon",
+    "@pinia/nuxt",
+    "@pinia-plugin-persistedstate/nuxt",
+    '@nuxtjs/i18n',
     [
       "@nuxtjs/robots",
       {
@@ -39,6 +42,11 @@ export default defineNuxtConfig({
 			nuxt.hooks.hook("vite:extendConfig", (config) => config.plugins.push(vuetify()))
 		},
   ],
+
+  i18n: {
+    vueI18n: './i18n.config.ts'
+  },
+
   app: {
     head: {
       htmlAttrs: {

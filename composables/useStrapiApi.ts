@@ -46,9 +46,61 @@ export default() => {
         })
     }
 
+    // Get Products by id
+    const getProductById = async (id: number) => {
+        return fetchWithTokenCheck(`${STRAPI_URL}/products/${id}?populate=*`, {
+            method: 'GET',
+            headers: headers,
+            cache: 'no-cache',
+        })
+    }
+
+    // Create Product
+    const createProduct = async (product: any) => {
+        return fetchWithTokenCheck(`${STRAPI_URL}/products`, {
+            method: 'POST',
+            body: product,
+            headers: headers,
+            cache: 'no-cache',
+        })
+    }
+
+    // Update Product
+    const updateProduct = async (id: number, product: any) => {
+        return fetchWithTokenCheck(`${STRAPI_URL}/products/${id}`, {
+            method: 'PUT',
+            body: product,
+            headers: headers,
+            cache: 'no-cache',
+        })
+    }
+
+    // Delete Product
+    const deleteProduct = async (id: number) => {
+        return fetchWithTokenCheck(`${STRAPI_URL}/products/${id}`, {
+            method: 'DELETE',
+            headers: headers,
+            cache: 'no-cache',
+        })
+    }
+
+    // Search Products by title
+    const searchProducts = async (keyword: string) => {
+        return fetchWithTokenCheck<ProductResponse & MetaResponse>(`${STRAPI_URL}/products?filters[title][$containsi]=${keyword}&populate=*`, {
+            method: 'GET',
+            headers: headers,
+            cache: 'no-cache',
+        })
+    }
+
     return {
         getCategories,
-        getProducts
+        getProducts,
+        getProductById,
+        createProduct,
+        updateProduct,
+        deleteProduct,
+        searchProducts
     }
 
 }
