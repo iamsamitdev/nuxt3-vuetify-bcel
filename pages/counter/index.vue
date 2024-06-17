@@ -1,13 +1,18 @@
 <script setup lang="ts">
+
+    const { setLocale } = useI18n()
+    
     // import store counter
     import { useCounterStore } from '@/stores/counter'
+    import { useLocaleStore } from '@/stores/locale'
 
-    import CartItem from '@/components/cart/cartItem.vue';
+    import CartItem from '@/components/cart/cartItem.vue'
 
     // create counter object
     const counter = useCounterStore()
 
-    const { setLocale } = useI18n()
+    // create locale object
+    const locale = useLocaleStore()
 
 </script>
 
@@ -15,8 +20,10 @@
     <div>
     
     <v-card class="mx-auto" width="400">
-      <button @click="setLocale('en')">EN</button> / 
-      <button @click="setLocale('th')">TH</button>
+      <!-- <button @click="setLocale('en')">EN</button> / 
+      <button @click="setLocale('th')">TH</button> -->
+      <button @click="locale.setLocale('en')">EN</button> / 
+      <button @click="locale.setLocale('th')">TH</button>
       <p>{{ $t('hello') }}</p>
     </v-card>
 
